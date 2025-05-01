@@ -9,11 +9,11 @@ const FaqItem = ({ question, answer, isOpen, onToggle }) => {
         className="w-full flex justify-between items-center text-left p-4 retro-card hover:cursor-pointer"
         onClick={onToggle}
       >
-        <span className="font-pixel text-sm md:text-base text-cyber-yellow">{question}</span>
+        <span className="font-pixel text-sm md:text-base text-[#ff5c00]">{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="text-cyber-yellow"
+          className="text-[#ff5c00]"
         >
           <FaChevronDown />
         </motion.div>
@@ -28,7 +28,7 @@ const FaqItem = ({ question, answer, isOpen, onToggle }) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="p-4 bg-dark-card/60 border-l-2 border-r-2 border-b-2 border-cyber-yellow">
+            <div className="p-4 bg-dark-card/60 border-l-2 border-r-2 border-b-2 retro-card">
               <p className="text-gray-200">{answer}</p>
             </div>
           </motion.div>
