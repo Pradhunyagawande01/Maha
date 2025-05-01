@@ -1,0 +1,120 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding-top: 80px; /* Navbar height */
+  perspective: 1000px;
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.pixel-divider {
+  height: 8px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-primary) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  margin: var(--spacing-4) 0;
+  position: relative;
+}
+
+.page-content {
+  padding: var(--spacing-5) 0;
+  animation: screenOn 0.8s ease-out forwards;
+}
+
+/* Arcade-style section titles */
+.arcade-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  margin-bottom: var(--spacing-5);
+  position: relative;
+  padding-bottom: var(--spacing-3);
+}
+
+.arcade-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--color-secondary),
+    var(--color-secondary) 10px,
+    var(--color-primary) 10px,
+    var(--color-primary) 20px
+  );
+}
+
+/* Arcade button */
+.arcade-btn {
+  font-family: var(--font-heading);
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-4);
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: transform 0.1s;
+  box-shadow: 0 6px 0 #a1286c;
+  border-radius: 4px;
+}
+
+.arcade-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #a1286c;
+  background-color: var(--color-secondary);
+}
+
+.arcade-btn:active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #a1286c;
+}
+
+/* Retro card */
+.retro-card {
+  background-color: var(--color-card);
+  border: 3px solid var(--color-primary);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.retro-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.5);
+}

@@ -1,58 +1,119 @@
-import { useEffect, useState } from 'react';
-import Loader from './components/Loader';
-import Hack4maha from './Hack4maha';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import FAQ from './pages/FAQ'
+import Prize from './pages/Prize'
+import Gallery from './pages/Gallery'
+import Sponsors from './pages/Sponsors'
+import Team from './pages/Team'
+import Register from './pages/Register'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
-  const [showLoader, setShowLoader] = useState(true);
-  const [showHack4maha, setShowHack4maha] = useState(false);
-
-  useEffect(() => {
-    // First show loader for 4s
-    const loaderTimeout = setTimeout(() => {
-      setShowLoader(false);
-      setShowHack4maha(true);
-    }, 4000);
-
-    // Optional: hide Hack4maha and show main site after few seconds
-    const hack4mahaTimeout = setTimeout(() => {
-      setShowHack4maha(false);
-    }, 7000); // 4s loader + 3s Hack4maha
-
-    return () => {
-      clearTimeout(loaderTimeout);
-      clearTimeout(hack4mahaTimeout);
-    };
-  }, []);
-
   return (
-    <>
-      {showLoader ? (
-        <Loader />
-      ) : showHack4maha ? (
-        <Hack4maha
-          sentence="Hack4Maharashtra"
-          manualMode={false}
-          blurAmount={5}
-          borderColor="red"
-          animationDuration={2}
-          pauseBetweenAnimations={1}
-        />
-      ) : (
-        <div className="app">
-        <Hack4maha
-        sentence="Hack4Maharashtra"
-        manualMode={false}
-        blurAmount={5}
-        borderColor="red"
-        animationDuration={2}
-        pauseBetweenAnimations={1}
-      />
-
-        </div>
-      )}
-    </>
-  );
+    <div className="flex flex-col min-h-screen relative">
+      <div className="stars-container fixed inset-0 -z-10 overflow-hidden">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div>
+      
+      <Navbar />
+      
+      <main className="flex-grow pt-20 z-10">
+        <ScrollToTop />
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Home />
+              </motion.div>
+            } />
+            <Route path="/about" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <About />
+              </motion.div>
+            } />
+            <Route path="/faq" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <FAQ />
+              </motion.div>
+            } />
+            {/* <Route path="/prize" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Prize />
+              </motion.div>
+            } /> */}
+            {/* <Route path="/gallery" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Gallery />
+              </motion.div>
+            } /> */}
+            {/* <Route path="/sponsors" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Sponsors />
+              </motion.div>
+            } /> */}
+            {/* <Route path="/team" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Team />
+              </motion.div>
+            } /> */}
+            <Route path="/register" element={
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Register />
+              </motion.div>
+            } />
+          </Routes>
+        </AnimatePresence>
+      </main>
+      
+      <Footer />
+    </div>
+  )
 }
 
-export default App;
+export default App
