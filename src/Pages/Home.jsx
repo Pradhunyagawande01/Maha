@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import CountdownTimer from "../components/CountdownTimer";
-import SectionTitle from "../components/SectionTitle";
-import PixelArt from "../components/PixelArt";
+import CountdownTimer from "../Components/CountdownTimer";
+import SectionTitle from "../Components/SectionTitle";
+import PixelArt from "../Components/PixelArt";
 
 const Home = () => {
   // Change this date to your hackathon date

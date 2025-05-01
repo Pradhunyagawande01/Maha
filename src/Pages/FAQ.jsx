@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import SectionTitle from '../components/SectionTitle';
-import FaqAccordion from '../components/FaqAccordion';
-import PixelArt from '../components/PixelArt';
+import SectionTitle from '../Components/SectionTitle';
+import FaqAccordion from '../Components/FaqAccordion';
+import PixelArt from '../Cmponents/PixelArt';
 
 const FAQ = () => {
   const faqItems = [

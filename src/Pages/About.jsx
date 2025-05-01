@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import SectionTitle from "../components/SectionTitle";
-import PixelArt from "../components/PixelArt";
+import SectionTitle from "./Components/SectionTitle";
+import PixelArt from "./Components/PixelArt";
 
 const About = () => {
   return (
