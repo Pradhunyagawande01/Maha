@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import SectionTitle from '../components/SectionTitle';
-import PixelArt from '../components/PixelArt';
+import SectionTitle from '../Components/SectionTitle';
+import PixelArt from '../Components/PixelArt';
 
 const Register = () => {
   const [formData, setFormData] = useState({
