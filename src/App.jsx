@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './Components/Navbar'
-import Footer from './components/Footer'
+import Footer from './Components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import FAQ from './Pages/FAQ'
@@ -10,7 +10,7 @@ import FAQ from './Pages/FAQ'
 // import Sponsors from './pages/Sponsors'
 // import Team from './pages/Team'
 import Register from './pages/Register'
-import ScrollToTop from './components/ScrollToTop'
+import ScrollToTop from './Components/ScrollToTop'
 
 function App() {
   return (
