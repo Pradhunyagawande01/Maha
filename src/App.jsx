@@ -2,15 +2,15 @@ import { Routes, Route } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
-import Home from './Pages/Home'
-import About from './Pages/About'
-import FAQ from './Pages/FAQ'
-// import Prize from './pages/Prize'
-// import Gallery from './pages/Gallery'
-// import Sponsors from './pages/Sponsors'
-// import Team from './pages/Team'
-import Register from './Pages/Register'
-import ScrollToTop from './Components/ScrollToTop'
+import Home from './pages/Home'
+import About from './pages/About'
+import FAQ from './pages/FAQ'
+import Prize from './pages/Prize'
+import Gallery from './pages/Gallery'
+import Sponsors from './pages/Sponsors'
+import Team from './Pages/Team'
+import Register from './pages/Register'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -87,7 +87,7 @@ function App() {
                 <Sponsors />
               </motion.div>
             } /> */}
-            {/* <Route path="/team" element={
+            <Route path="/team" element={
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ function App() {
               >
                 <Team />
               </motion.div>
-            } /> */}
+            } />
             <Route path="/register" element={
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

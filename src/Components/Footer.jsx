@@ -42,19 +42,19 @@ const Footer = () => {
               <li><a href="/" className="text-gray-300 hover:text-blue-800 transition-all duration-200 hover:pl-1">Home</a></li>
               <li><a href="/about" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">About</a></li>
               <li><a href="/faq" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">FAQ</a></li>
-              <li><a href="/prize" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">Prizes</a></li>
-            </ul> */}
+              {/* <li><a href="/prize" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">Prizes</a></li> */}
+            {/* </ul> */}
           </div>
           
-          <div>
-            {/* <h4 className="font-pixel text-[#ff5c00] text-sm mb-4">Resources</h4>
+          {/* <div>
+            <h4 className="font-pixel text-[#ff5c00] text-sm mb-4">Resources</h4>
             <ul className="space-y-2">
               <li><a href="/sponsors" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">Sponsors</a></li>
               <li><a href="/team" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">Team</a></li>
               <li><a href="/gallery" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">Gallery</a></li>
               <li><a href="/code-of-conduct" className="text-gray-300 hover:text-blue-800  transition-all duration-200 hover:pl-1">Code of Conduct</a></li>
-            </ul> */}
-          </div>
+            </ul>
+          </div> */}
           
           <div>
             <h4 className="font-pixel text-[#ff5c00] text-sm mb-4">Contact</h4>

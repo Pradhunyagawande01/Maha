@@ -189,6 +189,61 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-20">
+  <div className="container-custom px-4">
+    <SectionTitle>Upcoming Event</SectionTitle>
+
+    <div className="flex justify-center">
+      <motion.div
+        className="retro-card w-full max-w-2xl p-6 sm:p-8 text-center break-words"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5 }}
+      >
+        <h3 className="font-pixel text-[#ff5c00] text-lg sm:text-xl mb-4 leading-snug">
+          NariNexus Presents: <br /> Hack4Maharashtra – The Grand Kick-Off Show
+        </h3>
+
+        <p className="text-sm sm:text-base mb-4">
+          Get ready to ignite your hackathon spirit with two incredible changemakers ♥
+        </p>
+
+        <ul className="text-left text-sm sm:text-base mb-4 list-disc list-inside px-4">
+          <li><strong>Swati Awasthi</strong>, Founder of Women in Product India</li>
+          <li><strong>Amrit Raj</strong>, Co-founder of Sheleads Technologies</li>
+        </ul>
+
+        <div className="text-sm sm:text-base mb-4">
+          🗓 <strong>Date:</strong> 10th May 2025<br />
+          🕑 <strong>Time:</strong> 2:00 PM – 4:00 PM IST<br />
+          📍 <strong>Platform:</strong> Google Meet
+        </div>
+
+        <div className="text-left text-sm sm:text-base mb-4 px-4">
+          <p><strong>What to Expect?</strong></p>
+          <ul className="list-disc list-inside">
+            <li>💬 Live Q&A with the speakers</li>
+            <li>🎉 Fun Quiz with shoutouts & prizes</li>
+            <li>🛠 Exclusive Hack4Maha Announcements</li>
+          </ul>
+        </div>
+
+        <div className="text-sm sm:text-base mb-4 space-y-2 break-words">
+          🔗 <a href="https://lu.ma/v4o20p7p" className="text-blue-500 underline break-all" target="_blank" rel="noopener noreferrer">https://lu.ma/v4o20p7p</a><br />
+          🔗 <a href="https://solo.to/hack4maha" className="text-blue-500 underline break-all" target="_blank" rel="noopener noreferrer">https://solo.to/hack4maha</a>
+        </div>
+
+        <p className="text-xs text-gray-500 mt-6">&gt; Powered By Team NariNexus</p>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
+
+
+
     </div>
   );
 };

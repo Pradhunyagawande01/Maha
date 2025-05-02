@@ -54,9 +54,13 @@ const FAQ = () => {
           <SectionTitle>Frequently Asked Questions</SectionTitle>
           
           <div className="relative">
-            <div className="absolute top-0 right-0 -translate-y-16 hidden lg:block">
-              <PixelArt type="rocket" size="xl" />
-            </div>
+          <div className="absolute -top-6 -right-6 z-10">
+                  <img
+                    src="/img/orange.png"
+                    alt="Orange Icon"
+                    className="w-20 h-30 object-contain"
+                  />
+                </div>
             
             {/* <motion.p 
               className="text-center max-w-2xl mx-auto mb-12 text-lg"
