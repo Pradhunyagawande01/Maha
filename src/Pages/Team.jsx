@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa";
-import SectionTitle from "../Components/SectionTitle";
-import PixelArt from "../Components/PixelArt";
+import SectionTitle from "../components/SectionTitle";
+import PixelArt from "../components/PixelArt";
 
 const TeamMember = ({ member, index }) => {
   return (

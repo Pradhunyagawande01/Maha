@@ -37,7 +37,7 @@ const Home = () => {
           </h1>
 
           <motion.p
-            className="text-xl md:text-2xl font-pixel mb-8 text-[#379b19]"
+            className="text-xl md:text-2xl font-pixel mb-8 text-whitenpm "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -59,15 +59,16 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            {/* <Link to="/register" className="arcade-btn">
+            <Link to="https://hack4maharashtra.devfolio.co/" target="_blank" 
+            className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200">
               Register Now
-            </Link> */}
-            <Link
+            </Link>
+            {/* <Link
               to="/about"
               className="btn btn-primary border-2 border-[#597E1E] hover:bg-cyber-yellow/10 font-pixel py-2 px-6 transition-all duration-200"
             >
               Learn More
-            </Link>
+            </Link> */}
           </motion.div>
 
           <motion.div

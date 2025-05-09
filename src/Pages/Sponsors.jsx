@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import SectionTitle from '../Components/SectionTitle';
-import PixelArt from '../Components/PixelArt';
+import SectionTitle from '../components/SectionTitle';
+import PixelArt from '../components/PixelArt';
 
 const Sponsors = () => {
   const [activeCategory, setActiveCategory] = useState('platinum');
