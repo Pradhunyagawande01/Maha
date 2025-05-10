@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Home from './Pages/Home'
 import About from './Pages/About'
-import FAQ from './Pages/Faq'
+import Faq from './Pages/Faq'
 // import Prize from './pages/Prize'
 // import Gallery from './pages/Gallery'
 // import Sponsors from './pages/Sponsors'
@@ -54,7 +54,7 @@ function App() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4 }}
               >
-                <FAQ />
+                <Faq />
               </motion.div>
             } />
             {/* <Route path="/prize" element={
