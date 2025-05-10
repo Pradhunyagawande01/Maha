@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Home from './Pages/Home'
 import About from './Pages/About'
-import Faq from './Pages/Faq' ;
+import Faq from './pages/Faq'
 // import Prize from './pages/Prize'
 // import Gallery from './pages/Gallery'
 // import Sponsors from './pages/Sponsors'
