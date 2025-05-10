@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Home from './Pages/Home'
-import About from './pages/About'
+import About from './Pages/About'
 import FAQ from './pages/FAQ'
 import Prize from './pages/Prize'
 import Gallery from './pages/Gallery'
@@ -23,7 +23,7 @@ function App() {
       
       <Navbar />
       
-      <main className="flex-grow pt-20 z-10">
+      <main className="flex-grow pt-20 z-10 scroll-bar-hidden">
         <ScrollToTop />
         <AnimatePresence mode="wait">
           <Routes>
