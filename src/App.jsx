@@ -10,7 +10,7 @@ import FAQ from './Pages/FAQ'
 // import Sponsors from './pages/Sponsors'
 import Team from './Pages/Team'
 import Register from './Pages/Register'
-import ScrollToTop from './components/ScrollToTop'
+import ScrollToTop from './Components/ScrollToTop'
 // import { FaQ } from 'react-icons/fa6'
 
 function App() {
