@@ -11,6 +11,7 @@ import Faq from './Pages/Faq'
 import Team from './Pages/Team'
 import Register from './pages/Register'
 import ScrollToTop from './components/ScrollToTop'
+import { FaQ } from 'react-icons/fa6'
 
 function App() {
   return (
