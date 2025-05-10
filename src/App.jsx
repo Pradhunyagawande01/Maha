@@ -9,7 +9,7 @@ import FAQ from './Pages/FAQ'
 // import Gallery from './pages/Gallery'
 // import Sponsors from './pages/Sponsors'
 import Team from './Pages/Team'
-import Register from './pages/Register'
+import Register from './Pages/Register'
 import ScrollToTop from './components/ScrollToTop'
 // import { FaQ } from 'react-icons/fa6'
 
