@@ -4,14 +4,14 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Home from './Pages/Home'
 import About from './Pages/About'
-import Faq from './Pages/Faq'
+import Faq from './Pages/Faq' ;
 // import Prize from './pages/Prize'
 // import Gallery from './pages/Gallery'
 // import Sponsors from './pages/Sponsors'
 import Team from './Pages/Team'
-import Register from './pages/Register'
+// import Register from './pages/Register'
 import ScrollToTop from './components/ScrollToTop'
-import { FaQ } from 'react-icons/fa6'
+// import { FaQ } from 'react-icons/fa6'
 
 function App() {
   return (
