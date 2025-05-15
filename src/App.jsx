@@ -9,7 +9,7 @@ import Prize from './Pages/Prize'
 import Gallery from './Pages/Gallery'
 import Sponsors from './Pages/Sponsors'
 import Team from './Pages/Team'
-import Register from './pages/Register'
+import Register from './Pages/Register'
 import ScrollToTop from './Components/ScrollToTop'
 
 function App() {
