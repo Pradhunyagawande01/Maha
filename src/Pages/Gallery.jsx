@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import SectionTitle from '../components/SectionTitle';
+import SectionTitle from '../Components/SectionTitle';
 
 const ImageModal = ({ image, onClose }) => {
   return (
