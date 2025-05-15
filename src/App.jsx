@@ -3,15 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Home from './Pages/Home'
-import About from './Pages/About'
-import FAQ from './Pages/FAQ'
-// import Prize from './pages/Prize'
-// import Gallery from './pages/Gallery'
-// import Sponsors from './pages/Sponsors'
+import About from './pages/About'
+import FAQ from './pages/FAQ'
+import Prize from './pages/Prize'
+import Gallery from './pages/Gallery'
+import Sponsors from './pages/Sponsors'
 import Team from './Pages/Team'
-import Register from './Pages/Register'
-import ScrollToTop from './Components/ScrollToTop'
-// import { FaQ } from 'react-icons/fa6'
+import Register from './pages/Register'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
       
       <Navbar />
       
-      <main className="flex-grow pt-20 z-10 scroll-bar-hidden">
+      <main className="flex-grow pt-20 z-10">
         <ScrollToTop />
         <AnimatePresence mode="wait">
           <Routes>

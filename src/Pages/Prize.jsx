@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import SectionTitle from '../Components/SectionTitle';
-import PixelArt from '../Components/PixelArt';
+import SectionTitle from '../components/SectionTitle';
+import PixelArt from '../components/PixelArt';
 
 const PrizeCard = ({ title, amount, benefits, ribbon, delay }) => {
   return (
