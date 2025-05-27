@@ -6,44 +6,52 @@ import PixelArt from '../Components/PixelArt';
 const FAQ = () => {
   const faqItems = [
     {
-      question: "What is Hack4Maha?",
-      answer: "Hack4Maha is a 24-hour hackathon where participants collaborate to build innovative solutions to real-world problems. It's a platform for learning, networking, and showcasing your skills."
+      question: "What is Hack4maha and what makes it unique?",
+      answer: "Hack4maha is a dynamic 24-hour in-person hackathon organized by NariNexus in Maharashtra. It’s designed to inspire creativity, foster collaboration, and push the boundaries of technology, offering an unforgettable experience for all participants. "
     },
     {
-      question: "Who can participate?",
-      answer: "Anyone with an interest in technology can participate! Whether you're a student, professional, designer, or developer, we welcome participants of all skill levels and backgrounds."
+      question: "How can I participate in Hack4maha?",
+      answer: "You can register through our official website. Once registered, you’ll receive further instructions and updates via email."
     },
     {
-      question: "Is there a registration fee?",
-      answer: "No, Hack4Maha is completely free to participate in! We believe in making innovation accessible to everyone."
+      question: "What are the eligibility criteria for participants?",
+      answer: "Everyone is welcome! Whether you’re a student or a tech enthusiast, all skill levels can participate"
     },
     {
-      question: "Do I need a team to participate?",
-      answer: "While we encourage team participation (teams of 2-4 people and a girl teammate is compulsary)."
+      question: "What should I bring to the hackathon?",
+      answer: "Bring your laptop, charger, any software tools you need, and lots of enthusiasm! We’ll take care of food and drinks."
     },
     {
-      question: "What should I bring?",
-      answer: "Bring your laptop, charger, any hardware you plan to use for your project, and a positive attitude! We'll provide meals, snacks, and a comfortable hacking environment."
+      question: "Are inter-college teams allowed to participate?",
+      answer:  "Absolutely! You can form teams with participants from different colleges, universities, or backgrounds"
     },
     {
-      question: "How are projects judged?",
-      answer: "Projects are judged based on innovation, technical complexity, design, practicality, and presentation. Our panel of judges includes industry experts and tech leaders who will evaluate each submission."
+      question: "Can I participate solo?",
+      answer: "Yes, solo participation is allowed. However, we encourage forming teams for the best networking and collaborative experience, but going solo is totally fine! "
     },
     {
-      question: "What kind of projects can I build?",
-      answer: "You can build any type of project that aligns with our themes. This includes web/mobile applications, hardware projects, AI solutions, games, and more. We encourage creativity and innovation!"
+      question: "Will there be WiFi available at the venue?",
+      answer: "Of course! We know how important the internet is for hacking (and surviving 😄)."
     },
     {
-      question: "Are there prizes?",
-      answer: "Yes! We have exciting prizes for the winning teams, including cash rewards, tech gadgets, internship opportunities, and more. Check our Prizes page for detailed information."
+      question: "It’s my first hackathon. What should I know?",
+      answer: "Hackathons are about more than just winning they’re fantastic for learning, networking, and having fun. Come with a learning mindset, and you’re guaranteed to gain something valuable (and have a great time)!"
     },
     {
-      question: "What if I don't know how to code?",
-      answer: "No problem! Hack4Maha is a learning experience. We'll have workshops and mentors to help you get started. Teams need diverse skills, including design, presentation, and problem-solving abilities."
+      question: "Will there be enough charging ports available?",
+      answer: "Yes, we’ll ensure every team has access to charging ports. We know how crucial this is from our own hackathon experiences!"
     },
     {
-      question: "Will there be food and accommodation?",
-      answer: "Yes, we provide meals throughout the hackathon. While we don't provide accommodation, we can suggest nearby affordable options for out-of-town participants."
+      question: "Do I need to bring food or snacks?",
+      answer: "No need! We’ll provide all meals and snacks throughout the event."
+    },
+    {
+      question: "I have already applied but my application is not approved yet. What should I do?",
+      answer: " Please be patient. We’ve received a high volume of registrations and are processing applications as quickly as possible. You’ll hear from us soon! "
+    },
+    {
+      question: "Will our travel expenses be covered?",
+      answer: "While we wish we could cover all of you guy's travel expenses, we cannot reimburse for travel costs. Food and accommodation is on us for the duration of the hack."
     }
   ];
   
