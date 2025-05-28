@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import SectionTitle from "../Components/SectionTitle";
 import PixelArt from "../Components/PixelArt";
-import { Calendar, Lightbulb, Target, Sparkles, BookOpen, Globe } from 'lucide-react';
-
+import {
+  Calendar,
+  Lightbulb,
+  Target,
+  Sparkles,
+  BookOpen,
+  Globe,
+} from "lucide-react";
 
 const About = () => {
   return (
@@ -192,7 +198,7 @@ const About = () => {
         </div>
       </section>
 
-<section className="py-20">
+      <section className="py-20">
   <div className="container-custom px-4">
     <SectionTitle>Upcoming Events</SectionTitle>
 
@@ -203,99 +209,102 @@ const About = () => {
           title: "Pixel Art Contest",
           date: "📅 16th May 2025",
           location: "📍 Virtual Event",
-          description: "Show off your pixel art skills and compete for prizes in this fun community contest.",
+          description:
+            "Show off your pixel art skills and compete for prizes in this fun community contest.",
           link: "https://lu.ma/zhk2e7ps",
+          concluded: true,
         },
         {
           icon: "💡",
           title: "Idea to MVP ",
           date: "📅 17th May 2025",
           location: "📍 Innovation Hub, Floor 3",
-          description: "Learn how to transform your ideas into viable products with expert guidance.",
+          description:
+            "Learn how to transform your ideas into viable products with expert guidance.",
           link: "https://lu.ma/jkovsn5c",
+          concluded: true,
         },
         {
           icon: "🎯",
           title: "Skribbl Game Night",
           date: "📅 23rd May 2025",
           location: "📍 Virtual Event",
-          description: "Join our multiplayer drawing and guessing game for a fun-filled evening.",
+          description:
+            "Join our multiplayer drawing and guessing game for a fun-filled evening.",
           link: "https://lu.ma/8cai0u6z",
-        },
-        {
-          icon: "🚀",
-          title: "Hack4brahma Kick-Off",
-          date: "📅 25th May 2025",
-          location: "📍 Main Auditorium",
-          description: "Launch of our annual summer hackathon with exciting challenges and prizes.",
+          concluded: true,
         },
         {
           icon: "👩‍💻",
           title: "Women Who Code, Lead & Inspire",
           date: "📅 7th June 2025 | 🕐 1:00 PM – 5:00 PM",
           location: "📍 Conference Center, Room B",
-          description: "A networking and mentorship event celebrating women in technology.",
+          description:
+            "A networking and mentorship event celebrating women in technology.",
         },
         {
           icon: "🔥",
           title: "Free Fire Tournament",
           date: "📅 13th June 2025 | 🕐 6:00 PM – 9:00 PM",
           location: "📍 eSports Arena",
-          description: "Compete in teams of four in our exciting Free Fire mobile game tournament.",
+          description:
+            "Compete in teams of four in our exciting Free Fire mobile game tournament.",
         },
       ].map((event, i) => (
         <motion.div
           key={i}
-          className="retro-card p-6 flex flex-col items-center text-center bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl shadow-md"
+          className="relative retro-card p-6 flex flex-col items-center text-center bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl shadow-md"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
         >
+          {/* Concluded Tag */}
+          {event.concluded && (
+            <span className="absolute top-2 right-2 bg-[#ff5c00] text-black text-[10px] font-bold px-2 py-1 rounded uppercase shadow-md tracking-widest z-10">
+              Concluded
+            </span>
+          )}
+
           <div className="text-4xl mb-4">{event.icon}</div>
-          <h4 className="font-pixel text-[#ff5c00] text-lg mb-2">{event.title}</h4>
+          <h4 className="font-pixel text-[#ff5c00] text-lg mb-2">
+            {event.title}
+          </h4>
           <p className="mb-1 text-sm">{event.date}</p>
           <p className="mb-2 text-sm">{event.location}</p>
           <p className="mb-4 text-sm">{event.description}</p>
-          {event.link && (
-   <a
-  href={event.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block font-pixel uppercase text-white px-5 py-2 border-2 border-black rounded-md cursor-pointer select-none transition-transform duration-200 ease-in-out"
-  style={{
-    backgroundColor: '#ff5c00',
-    boxShadow: '3px 3px 0 0 #000',
-    letterSpacing: '0.1em',
-    fontFamily: "'Press Start 2P', cursive",
-  }}
-  onMouseEnter={e => {
-    e.currentTarget.style.transform = 'scale(1.05)';
-    e.currentTarget.style.borderColor = '#fff700';
-    e.currentTarget.style.boxShadow = '4px 4px 0 0 #000';
-  }}
-  onMouseLeave={e => {
-    e.currentTarget.style.transform = 'scale(1)';
-    e.currentTarget.style.borderColor = 'black';
-    e.currentTarget.style.boxShadow = '3px 3px 0 0 #000';
-  }}
->
-  Register Now
-</a>
 
-
-
-
+          {event.link && !event.concluded && (
+            <a
+              href={event.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-pixel uppercase text-white px-5 py-2 border-2 border-black rounded-md cursor-pointer select-none transition-transform duration-200 ease-in-out"
+              style={{
+                backgroundColor: "#ff5c00",
+                boxShadow: "3px 3px 0 0 #000",
+                letterSpacing: "0.1em",
+                fontFamily: "'Press Start 2P', cursive",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+                e.currentTarget.style.borderColor = "#fff700";
+                e.currentTarget.style.boxShadow = "4px 4px 0 0 #000";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.borderColor = "black";
+                e.currentTarget.style.boxShadow = "3px 3px 0 0 #000";
+              }}
+            >
+              Register Now
+            </a>
           )}
         </motion.div>
       ))}
     </div>
   </div>
 </section>
-
-
-
-
 
 
     </div>
