@@ -3,21 +3,35 @@ import { motion } from "framer-motion";
 import CountdownTimer from "../Components/CountdownTimer";
 import SectionTitle from "../Components/SectionTitle";
 import PixelArt from "../Components/PixelArt";
+import { useEffect } from "react";
 
 const Home = () => {
-  // Change this date to your hackathon date
   const hackathonDate = "2025-08-30T09:00:00";
+
+  // Inject custom CSS only once
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @keyframes sway {
+        0% { transform: rotate(-4deg); }
+        50% { transform: rotate(4deg); }
+        100% { transform: rotate(-4deg); }
+      }
+      .sway {
+        animation: sway 2.5s ease-in-out infinite;
+        transform-origin: top center;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
 
   return (
     <div className="screen-on">
       {/* Hero Section */}
-      <section
-        className="min-h-[90vh] flex flex-col justify-center items-center relative overflow-hidden"
-        // style={{
-        //   backgroundImage: "url(/img/bg1.png)",
-        //   backgroundSize: "cover",
-        // }}
-      >
+      <section className="min-h-[90vh] flex flex-col justify-center items-center relative overflow-hidden">
         <div className="absolute top-20 right-20 hidden lg:block">
           <PixelArt type="rocket" size="xl" />
         </div>
@@ -36,13 +50,25 @@ const Home = () => {
             <span style={{ color: "#ff5c00" }}>4Maha</span>
           </h1>
 
+          {/* Hanging Date */}
+          <div className="flex justify-center items-end gap-4 mb-8">
+            {["3", "0", "A", "U", "G"].map((char, index) => (
+              <div key={index} className="flex flex-col items-center sway">
+                <div className="w-1 h-12 bg-white"></div>
+                <div className="text-2xl md:text-6xl font-pixel text-white px-4 py-2 shadow-lg rounded-md">
+                  {char !== " " ? char : "\u00A0"}
+                </div>
+              </div>
+            ))}
+          </div>
+
           <motion.p
-            className="text-xl md:text-2xl font-pixel mb-8 text-whitenpm "
+            className="text-xl md:text-2xl font-pixel mb-8 text-whitenpm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            संयोजय|नवसृज|विजयी भव{" "}
+            संयोजय | नवसृज | विजयी भव{" "}
           </motion.p>
           <motion.p
             className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-[#ff5c00] font-pixel"
@@ -59,37 +85,29 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <Link to="https://hack4maharashtra.devfolio.co/" target="_blank" 
-            className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200">
+            <Link
+              to="https://hack4maharashtra.devfolio.co/"
+              target="_blank"
+              className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200"
+            >
               Register Now
             </Link>
             {/* <Link
-              to="/about"
-              className="btn btn-primary border-2 border-[#597E1E] hover:bg-cyber-yellow/10 font-pixel py-2 px-6 transition-all duration-200"
+              to=""
+              target="_blank"
+              className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200"
             >
-              Learn More
+             Support Us
             </Link> */}
-          </motion.div>
-
-          <motion.div
-            className="mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            {/* <h3 className="font-pixel mb-6">COUNTDOWN TO LAUNCH</h3> */}
-            <CountdownTimer targetDate={hackathonDate} />
           </motion.div>
         </motion.div>
       </section>
 
       {/* About Section Preview */}
-      <section className="py-20 bg-space-blue/30">
+      <section className="">
         <div className="container-custom text-[#ff5c00]">
-          <SectionTitle className="">About The Hackathon</SectionTitle>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
+            {/* <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -124,7 +142,7 @@ const Home = () => {
                   unstoppable creativity of Mumbai’s streets.
                 </p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -150,137 +168,18 @@ const Home = () => {
                 <p className=" font-pixel text-sm">PRIZES</p>
               </div>
             </motion.div>
+
+            <motion.div
+              className="mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              <CountdownTimer targetDate={hackathonDate} />
+            </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Themes Section */}
-      {/* <section className="py-20">
-        <div className="container-custom">
-          <SectionTitle>Hackathon Themes</SectionTitle>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "AI & Machine Learning",
-                description: "Build solutions powered by artificial intelligence and machine learning algorithms.",
-                icon: "🤖"
-              },
-              {
-                title: "FinTech Revolution",
-                description: "Create innovative financial technologies that transform how we handle money.",
-                icon: "💰"
-              },
-              {
-                title: "Healthcare Tech",
-                description: "Develop tools and applications that improve healthcare delivery and patient outcomes.",
-                icon: "🏥"
-              },
-              {
-                title: "Sustainable Future",
-                description: "Design solutions addressing environmental challenges and promoting sustainability.",
-                icon: "🌱"
-              },
-              {
-                title: "Smart Cities",
-                description: "Build technologies that make urban living more efficient, safe, and enjoyable.",
-                icon: "🏙️"
-              },
-              {
-                title: "Education Tech",
-                description: "Create platforms and tools that enhance learning experiences and accessibility.",
-                icon: "📚"
-              }
-            ].map((theme, index) => (
-              <motion.div
-                key={index}
-                className="retro-card p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-4xl mb-4">{theme.icon}</div>
-                <h3 className="font-pixel text-cyber-yellow text-lg mb-3">{theme.title}</h3>
-                <p className="text-gray-300">{theme.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* CTA Section */}
-      {/* <section className="py-20 bg-space-blue/30 relative overflow-hidden">
-        <div className="absolute top-10 left-10 hidden lg:block">
-          <PixelArt type="alien" size="xl" />
-        </div>
-        <div className="absolute bottom-10 right-10 hidden lg:block">
-          <PixelArt type="star" size="lg" />
-        </div>
-
-        <div className="container-custom text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-pixel text-3xl md:text-4xl text-white mb-6">
-              READY TO JOIN THE ADVENTURE?
-            </h2>
-            <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-              Don't miss your chance to be part of this incredible hackathon
-              experience. Register now and secure your spot!
-            </p>
-            <Link
-              to="https://solo.to/hack4maha"
-              className="arcade-btn text-lg py-3 px-8"
-            >
-              Our Socials
-            </Link>
-          </motion.div>
-        </div>
-      </section> */}
-
-      {/* Sponsors Preview */}
-      {/* <section className="py-20">
-        <div className="container-custom">
-          <SectionTitle>Our Sponsors</SectionTitle>
-          <p className="text-center text-lg mb-12 max-w-3xl mx-auto">
-            Hack4Maha is proudly supported by leading organizations committed to fostering innovation and tech talent.
-          </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            {[
-              "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=600",
-              "https://images.pexels.com/photos/5473302/pexels-photo-5473302.jpeg?auto=compress&cs=tinysrgb&w=600",
-              "https://images.pexels.com/photos/5473289/pexels-photo-5473289.jpeg?auto=compress&cs=tinysrgb&w=600",
-              "https://images.pexels.com/photos/5473957/pexels-photo-5473957.jpeg?auto=compress&cs=tinysrgb&w=600"
-            ].map((sponsor, index) => (
-              <motion.div
-                key={index}
-                className="w-full h-20 flex items-center justify-center p-4 bg-white/10 rounded hover:bg-white/20 transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-              >
-                <img 
-                  src={sponsor} 
-                  alt={`Sponsor ${index + 1}`} 
-                  className="max-h-12 max-w-full filter grayscale hover:grayscale-0 transition-all duration-300" 
-                />
-              </motion.div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link to="/sponsors" className="text-cyber-teal hover:text-cyber-yellow transition-colors duration-300 font-bold">
-              View all sponsors
-            </Link>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };

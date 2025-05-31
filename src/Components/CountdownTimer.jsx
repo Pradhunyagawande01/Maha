@@ -41,11 +41,11 @@ const CountdownTimer = ({ targetDate }) => {
         {Object.keys(timeLeft).map((interval) => (
           <div key={interval} className="flex flex-col ">
             <div className="retro-card p-4 md:p-6 mb-2 border-[#597E1E] border-2 rounded-lg text-[#597E1E]">
-              <span className="font-pixel text-xl md:text-4xl ">
+              <span className="font-pixel text-xs md:text-4xl ">
                 {formatTime(timeLeft[interval])}
               </span>
             </div>
-            <span className="font-pixel text-xs md:text-sm  uppercase">
+            <span className="font-pixel text-xs font-serif md:text-sm  uppercase">
               {interval}
             </span>
           </div>
