@@ -4,7 +4,7 @@ import FaqAccordion from '../Components/FaqAccordion';
 import PixelArt from '../Components/PixelArt';
 
 const FAQ = () => {
-  const faqItems = [
+  const generalFaqs = [
     {
       question: "What is Hack4maha and what makes it unique?",
       answer: "Hack4maha is a dynamic 24-hour in-person hackathon organized by NariNexus in Maharashtra. It’s designed to inspire creativity, foster collaboration, and push the boundaries of technology, offering an unforgettable experience for all participants. "
@@ -28,7 +28,10 @@ const FAQ = () => {
     {
       question: "Can I participate solo?",
       answer: "Yes, solo participation is allowed. However, we encourage forming teams for the best networking and collaborative experience, but going solo is totally fine! "
-    },
+    }
+  ];
+
+  const logisticsFaqs = [
     {
       question: "Will there be WiFi available at the venue?",
       answer: "Of course! We know how important the internet is for hacking (and surviving 😄)."
@@ -47,89 +50,53 @@ const FAQ = () => {
     },
     {
       question: "I have already applied but my application is not approved yet. What should I do?",
-      answer: " Please be patient. We’ve received a high volume of registrations and are processing applications as quickly as possible. You’ll hear from us soon! "
+      answer: "Please be patient. We’ve received a high volume of registrations and are processing applications as quickly as possible. You’ll hear from us soon!"
     },
     {
       question: "Will our travel expenses be covered?",
       answer: "While we wish we could cover all of you guy's travel expenses, we cannot reimburse for travel costs. Food and accommodation is on us for the duration of the hack."
     }
   ];
-  
+
   return (
     <div className="screen-on">
       <section className="py-20">
         <div className="container-custom">
           <SectionTitle>Frequently Asked Questions</SectionTitle>
-          
+
           <div className="relative">
-          <div className="absolute -top-6 -right-6 z-10">
-                  <img
-                    src="/img/orange.png"
-                    alt="Orange Icon"
-                    className="w-20 h-30 object-contain"
-                  />
-                </div>
-            
-            {/* <motion.p 
-              className="text-center max-w-2xl mx-auto mb-12 text-lg"
+            <div className="absolute -top-6 -right-6 z-10">
+              <img
+                src="/img/orange.png"
+                alt="Orange Icon"
+                className="w-20 h-30 object-contain"
+              />
+            </div>
+
+            {/* General FAQ Section */}
+            <motion.h3 
+              className="font-pixel text-xl text-cyber-yellow mb-4 text-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Got questions about Hack4Maha? We've got answers! Check out our most frequently asked questions below.
-            </motion.p> */}
-            
-            <FaqAccordion faqItems={faqItems} />
+              General Questions
+            </motion.h3>
+            <FaqAccordion faqItems={generalFaqs} />
+
+            {/* Logistics FAQ Section */}
+            <motion.h3 
+              className="font-pixel text-xl text-cyber-yellow mt-12 mb-4 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Logistics & Participation
+            </motion.h3>
+            <FaqAccordion faqItems={logisticsFaqs} />
           </div>
         </div>
       </section>
-      
-      {/* <section className="py-16 bg-space-blue/30">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h3 
-              className="font-pixel text-2xl text-cyber-yellow mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              Still Have Questions?
-            </motion.h3>
-            <motion.p 
-              className="text-lg mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              Can't find the answer you're looking for? Feel free to reach out to our team directly!
-            </motion.p>
-            <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <a 
-                href="mailto:info@hack4maha.com" 
-                className="arcade-btn"
-              >
-                Email Us
-              </a>
-              <a 
-                href="https://discord.gg/hack4maha" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn btn-primary border-2 border-cyber-yellow text-cyber-yellow hover:bg-cyber-yellow/10 font-pixel py-2 px-6 transition-all duration-200"
-              >
-                Join Discord
-              </a>
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
