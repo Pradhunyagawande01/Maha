@@ -9,6 +9,8 @@ import {
   BookOpen,
   Globe,
 } from "lucide-react";
+import Upcoming from "../Pages/Upcoming";
+
 
 const About = () => {
   return (
@@ -237,10 +239,11 @@ const About = () => {
         {
           icon: "👩‍💻",
           title: "Women Who Code, Lead & Inspire",
-          date: "📅 7th June 2025 | 🕐 1:00 PM – 5:00 PM",
-          location: "📍 Conference Center, Room B",
+          date: "📅 7th June 2025 | 🕐 6:00 PM - 8:00 PM",
+          location: " Virtual Event",
           description:
             "A networking and mentorship event celebrating women in technology.",
+            concluded: true,
         },
         {
           icon: "🔥",
@@ -305,6 +308,9 @@ const About = () => {
     </div>
   </div>
 </section>
+
+<Upcoming />
+
 
 
     </div>
