@@ -51,7 +51,7 @@ const Home = () => {
           </h1>
 
           {/* Hanging Date */}
-          {/* <div className="flex justify-center items-end gap-4 mb-8">
+          <div className="flex justify-center items-end gap-4 mb-8">
             {["3", "0", "A", "U", "G"].map((char, index) => (
               <div key={index} className="flex flex-col items-center sway">
                 <div className="w-1 h-12 bg-white"></div>
@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
 
           <motion.p
             className="text-xl md:text-2xl font-pixel mb-8 text-whitenpm"
