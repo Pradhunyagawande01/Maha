@@ -146,7 +146,7 @@ const PrizeCard = ({ position, amount, icon: Icon, description, delay }) => {
 
           <h3
             className={`text-xl sm:text-2xl font-bold ${
-              isVisible ? "text-pink-300" : "text-amber-900/0"
+              isVisible ? "text-yellow-500" : "text-amber-900/0"
             }`}
             style={{ fontFamily: '"Pirata One", cursive' }}
           >
@@ -162,7 +162,7 @@ const PrizeCard = ({ position, amount, icon: Icon, description, delay }) => {
               ₹{count.toLocaleString()}
               <Sparkles
                 className={`absolute -right-8 -top-4 w-6 h-6 ${
-                  isVisible ? "text-pink-400 animate-spin" : "text-amber-900/0"
+                  isVisible ? "text-yellow-400 animate-spin" : "text-amber-900/0"
                 }`}
               />
             </div>
@@ -237,7 +237,7 @@ const Prize = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-1 mt-8">
           <PrizeCard
             position="Winner"
-            amount={10000}
+            amount={15000}
             icon={Ship}
           />
         </div>
@@ -245,13 +245,13 @@ const Prize = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-8">
           <PrizeCard
             position="Runner-Up"
-            amount={7000}
+            amount={10000}
             icon={Anchor}
           
           />
           <PrizeCard
             position="2ⁿᵈ Runner-Up"
-            amount={5000}
+            amount={7000}
             icon={Sword}
            
           />
@@ -260,14 +260,14 @@ const Prize = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-8">
           <PrizeCard
             position="Best Beginner Team"
-            amount={3000}
+            amount={4000}
             icon={Gem}
             description=""
             
           />
           <PrizeCard
             position="Best Girls Team"
-            amount={3000}
+            amount={4000}
             icon={Gem}
             description=""
             
