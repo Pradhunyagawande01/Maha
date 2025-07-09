@@ -4,7 +4,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Tracks from './Pages/Tracks';
 import FAQ from './Pages/FAQ';
-import Prize from './Pages/Prize';
+import Prize2 from './Pages/Prize2';
 import Gallery from './Pages/Gallery';
 import Sponsors from './Pages/Sponsors';
 import Team from './Pages/Team';
@@ -26,6 +26,7 @@ function App() {
         <section id="about"><About /></section>
         {/* <section id="sponsors"><Sponsors /></section> */}
        <section id="tracks"><Tracks /></section>
+       <section id="prize2"><Prize2 /></section>
         <section id="faq"><FAQ /></section>
         <section id="team"><Team /></section>
 
