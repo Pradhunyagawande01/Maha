@@ -99,6 +99,13 @@ const Team = () => {
         twitter: "https://x.com/pradhunya_patil",
         linkedin: "https://www.linkedin.com/in/pradhunya-gawande",
       },
+      {
+        name: "Vaibhavi Mangrulkar",
+        role: "Sponsorship Lead",
+        photo: "/img/org/Vaibhavi.png",
+        // twitter: "https://x.com/pradhunya_patil",
+        linkedin: "https://www.linkedin.com/in/vaibhavi-mangrulkar-7b0793285",
+      },
     ],
   };
 
