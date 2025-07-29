@@ -50,6 +50,8 @@ const Home = () => {
             <span style={{ color: "#ff5c00" }}>4Maha</span>
           </h1>
 
+
+
           {/* Hanging Date */}
      <div className="flex justify-center items-center gap-2 md:gap-4 mb-8 font-pixel text-white text-lg md:text-2xl">
   {["30", "31st", "AUG", "2025"].map((item, index) => (
