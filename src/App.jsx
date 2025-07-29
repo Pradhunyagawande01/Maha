@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Tracks from './components/Tracks';
-import StickyScrollRevealDemo from "./components/sticky-scroll-reveal-demo"
+import StickyScrollRevealDemo from "./components/stickyscrollrevealdemo";
 import Timeline from './components/Timeline';
 import GalleryDemo from "./pages/GalleryDemo";
 import Gallery2 from "./pages/Gallery2";
