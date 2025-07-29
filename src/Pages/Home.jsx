@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import CountdownTimer from "../Components/CountdownTimer";
-import SectionTitle from "../Components/SectionTitle";
+  
 import PixelArt from "../Components/PixelArt";
 import { useEffect } from "react";
 
@@ -96,13 +96,7 @@ const Home = () => {
             >
               Register Now
             </Link>
-            {/* <Link
-              to=""
-              target="_blank"
-              className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200"
-            >
-             Support Us
-            </Link> */}
+           
           </motion.div>
           <motion.div
               className="mt-12"
@@ -119,42 +113,7 @@ const Home = () => {
       <section className="">
         <div className="container-custom text-[#ff5c00]">
           <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
-            {/* <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="retro-card p-6 relative">
-                <div className="absolute -top-6 -right-6 z-10">
-                  <img
-                    src="/img/orange.png"
-                    alt="Orange Icon"
-                    className="w-20 h-30 object-contain"
-                  />
-                </div>
-                <h3 className=" font-pixel text-[#597E1E] mb-4">
-                  WHAT IS HACK4MAHA?
-                </h3>
-                <p className="text-gray-200 mb-4">
-                  Hack4Maha is a 24-hour arcade-themed hackathon where culture
-                  meets code. From the forts of Shivaji Maharaj to the streets
-                  of Mumbai, we honor Maharashtra’s spirit.
-                </p>
-                <p className="text-gray-200 mb-4">
-                  In one electrifying day, tradition and tech collide to create
-                  tomorrow. Hack for legacy. Build for the future.
-                </p>
-                <p className="text-gray-200 mb-4">
-                  Hack4Maha is Maharashtra’s biggest 24-hour hackathon, where
-                  technology meets tradition. Powered by NariNexus, this
-                  arcade-themed hackathon celebrates the spirit of Maharashtra —
-                  from the bravery echoing in the stones of Sinhagad, Raigad,
-                  and Pratapgad, to the zest of Nagpur’s oranges and the
-                  unstoppable creativity of Mumbai’s streets.
-                </p>
-              </div>
-            </motion.div> */}
+            
 
             <motion.div
               initial={{ opacity: 0, x: 50 }}

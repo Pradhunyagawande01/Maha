@@ -1,0 +1,24 @@
+.parallax {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 0; /* Reduced */
+}
+
+.scroller {
+  display: inline-flex;
+  white-space: nowrap;
+  font-size: 1.75rem; /* Slightly smaller */
+  font-weight: bold;
+  color: white;
+}
+.parallax {
+  overflow: hidden;
+  will-change: transform;
+}
+
+.scroller {
+  white-space: nowrap;
+  display: inline-block;
+  will-change: transform;
+}

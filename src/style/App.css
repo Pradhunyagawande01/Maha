@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', monospace;
+  background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 25%, #2d1b69 50%, #1a1a3e 75%, #0a0a23 100%);
+  color: #f8fafc;
+  overflow-x: hidden;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.mario-app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Mario Theme Colors */
+:root {
+  --mario-red: #e60012;
+  --mario-blue: #0066cc;
+  --mario-yellow: #ffcc00;
+  --mario-green: #00cc44;
+  --mario-purple: #6600cc;
+  --mario-orange: #ff6600;
+  --night-dark: #0a0a23;
+  --night-medium: #1a1a3e;
+  --night-light: #2d1b69;
+  --star-yellow: #ffff88;
+  --coin-gold: #ffd700;
+}
+
+/* Enhanced Pixel Styling */
+.mario-card {
+  background: linear-gradient(145deg, rgba(26, 26, 62, 0.9), rgba(45, 27, 105, 0.7));
+  border: 4px solid var(--mario-yellow);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.mario-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--mario-red), var(--mario-blue), var(--mario-green), var(--mario-yellow));
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mario-card:hover::before {
+  opacity: 1;
+}
+
+.mario-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(230, 0, 18, 0.3),
+    0 0 30px rgba(255, 204, 0, 0.4);
+}
+
+.mario-button {
+  background: linear-gradient(145deg, var(--mario-red), #cc0010);
+  border: 3px solid var(--mario-yellow);
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mario-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.mario-button:hover::before {
+  left: 100%;
+}
+
+.mario-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 8px 16px rgba(230, 0, 18, 0.4),
+    0 0 20px rgba(255, 204, 0, 0.6);
+  background: linear-gradient(145deg, #ff1122, var(--mario-red));
+}
+
+.mario-button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(230, 0, 18, 0.4);
+}
+
+.mario-button.blue {
+  background: linear-gradient(145deg, var(--mario-blue), #0055bb);
+}
+
+.mario-button.blue:hover {
+  background: linear-gradient(145deg, #1177dd, var(--mario-blue));
+}
+
+.mario-button.green {
+  background: linear-gradient(145deg, var(--mario-green), #00bb33);
+}
+
+.mario-button.green:hover {
+  background: linear-gradient(145deg, #11dd55, var(--mario-green));
+}
+
+/* Animations */
+ 
+
+/* Mario Stars */
+.mario-star {
+  animation: twinkle 2s infinite;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 255, 136, 0.8);
+}
+
+/* Floating Clouds */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  opacity: 0.6;
+  animation: cloud-float 8s ease-in-out infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+}
+
+.cloud-1 {
+  width: 80px;
+  height: 40px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.cloud-1::before {
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 10px;
+}
+
+.cloud-1::after {
+  width: 60px;
+  height: 40px;
+  top: -15px;
+  right: 10px;
+}
+
+.cloud-2 {
+  width: 60px;
+  height: 30px;
+  top: 40%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.cloud-2::before {
+  width: 40px;
+  height: 40px;
+  top: -20px;
+  left: 5px;
+}
+
+.cloud-2::after {
+  width: 50px;
+  height: 30px;
+  top: -10px;
+  right: 5px;
+}
+
+.cloud-3 {
+  width: 100px;
+  height: 50px;
+  top: 60%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.cloud-3::before {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 15px;
+}
+
+.cloud-3::after {
+  width: 70px;
+  height: 50px;
+  top: -20px;
+  right: 15px;
+}
+
+/* Mario Pipes */
+.mario-pipe {
+  position: absolute;
+  background: linear-gradient(145deg, var(--mario-green), #00aa33);
+  border: 3px solid #006622;
+  border-radius: 8px 8px 0 0;
+  opacity: 0.3;
+}
+
+.pipe-1 {
+  width: 60px;
+  height: 120px;
+  bottom: 0;
+  left: 5%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.pipe-2 {
+  width: 80px;
+  height: 160px;
+  bottom: 0;
+  right: 8%;
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Animation Classes */
+.mario-star {
+  animation: twinkle 2s infinite;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.8s ease-out;
+}
+
+.bounce-in {
+  animation: bounce-in 1s ease-out;
+}
+
+.rotate-animation {
+  animation: rotate 10s linear infinite;
+}
+
+.shake-animation {
+  animation: shake 0.6s ease-in-out;
+}
+
+.zoom-in {
+  animation: zoom-in 1s ease-out;
+}
+
+.slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.coin-spin {
+  animation: coin-spin 2s ease-in-out infinite;
+}
+
+/* Mario text effects */
+.mario-text {
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 400;
+  text-shadow: 
+    3px 3px 0px var(--night-dark),
+    6px 6px 0px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+.neon-text {
+  color: var(--star-yellow);
+  text-shadow: 
+    0 0 10px var(--star-yellow),
+    0 0 20px var(--star-yellow),
+    0 0 30px var(--star-yellow),
+    0 0 40px var(--mario-yellow);
+  animation: pulse-glow 3s infinite;
+}
+
+.mario-title {
+  font-size: clamp(2rem, 4vw, 6rem);
+  background: white;
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+ 
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mario-button {
+    padding: 12px 24px;
+    font-size: 10px;
+  }
+  
+  .mario-text {
+    font-size: 14px;
+  }
+  
+  .mario-title {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+  
+  .cloud, .mario-pipe {
+    display: none;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--night-dark);
+  /* border: 2px solid var(--mario-yellow); */
+}
+
+::-webkit-scrollbar-thumb {
+  /* background: linear-gradient(145deg, var(--mario-red), var(--mario-blue)); */
+  border-radius: 8px;
+  border: 2px solid var(--mario-yellow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(145deg, var(--mario-blue), var(--mario-green));
+}
+
+/* Section styling */
+section {
+  min-height: 100vh;
+  padding:  0;
+  position: relative;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  /* margin-bottom: 80px; */
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* Enhanced Cards */
+.mario-stat-card {
+  background: linear-gradient(145deg, rgba(230, 0, 18, 0.2), rgba(0, 102, 204, 0.2));
+  border: 3px solid var(--coin-gold);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.mario-stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, var(--mario-yellow), transparent);
+  animation: rotate 4s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mario-stat-card:hover::before {
+  opacity: 0.1;
+}
+
+.mario-stat-card:hover {
+  transform: translateY(-12px) rotateX(5deg);
+  box-shadow: 
+    0 25px 50px rgba(255, 204, 0, 0.4),
+    0 0 50px rgba(230, 0, 18, 0.3);
+}
+
+/* Power-up effects */
+.power-up-glow {
+  position: relative;
+}
+
+.power-up-glow::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, var(--mario-red), var(--mario-yellow), var(--mario-blue), var(--mario-green));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.power-up-glow:hover::after {
+  opacity: 0.7;
+  animation: rotate 2s linear infinite;
+}
+
+/* Mario Coin Effect */
+.mario-coin {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle, var(--coin-gold), #cc9900);
+  border: 2px solid #996600;
+  border-radius: 50%;
+  position: relative;
+  animation: coin-spin 3s ease-in-out infinite;
+}
+
+.mario-coin::before {
+  content: '★';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #996600;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Loading Animation */
+.mario-loading {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--mario-blue);
+  border-top: 4px solid var(--mario-red);
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+/* Enhanced Hover Effects */
+.mario-hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mario-hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  filter: brightness(1.1);
+}
+ 
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--star-yellow);
+  border-radius: 50%;
+  animation: particle-float 2s linear infinite;
+  pointer-events: none;
+}

@@ -1,0 +1,97 @@
+/* src/components/HeroParallax.css */
+
+.hero-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.parallax-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.blur-btn {
+  position: relative;
+  padding: 0.8rem 1.8rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  text-decoration: none;
+}
+
+.bg-hover {
+  position: absolute;
+  inset: 0;
+  background: yellow;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+  z-index: 0;
+  border-radius: 0.8rem;
+  opacity: 0.2;
+}
+
+.blur-btn:hover .bg-hover {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
