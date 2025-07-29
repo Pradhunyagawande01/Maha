@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { StickyScroll } from "./ui/stickyscrollreveal";
 import DottedBg from "./DottedBg";
 
 const content = [
