@@ -5,7 +5,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 // import AnimatedTitle from "../Components/AnimatedTitle";
 // import Footer from "../Components/Footer";
-import DottedBg from '../components/DottedBg';
+import DottedBg from '../Components/DottedBg';
 
 
 export default function Gallery() {

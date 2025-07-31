@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Tracks from './components/Tracks';
-import StickyScrollRevealDemo from "./components/stickyscrollrevealdemo";
-import Timeline from './components/Timeline';
-import GalleryDemo from "./pages/GalleryDemo";
-import Gallery2 from "./pages/Gallery2";
-import Team from './components/Team';
-import Venue from './components/Venue';
-import Sponsors from './components/Sponsors';
-import Footer from './components/Footer';
-import MarioCharacter from './components/MarioCharacter';
-import FaqSection from './components/FAQ';
+import Header from './Components/Header';
+import Hero from './Components/Hero';
+import About from './Components/About';
+import Tracks from './Components/Tracks';
+import StickyScrollRevealDemo from "./Components/stickyscrollrevealdemo";
+import Timeline from './Components/Timeline';
+import GalleryDemo from "./Pages/GalleryDemo";
+import Gallery2 from "./Pages/Gallery2";
+import Team from './Components/Team';
+import Venue from './Components/Venue';
+import Sponsors from './Components/Sponsors';
+import Footer from './Components/Footer';
+import MarioCharacter from './Components/MarioCharacter';
+import FaqSection from './Components/FAQ';
 import './style/App.css';
 
 
