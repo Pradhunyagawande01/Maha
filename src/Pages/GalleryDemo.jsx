@@ -1,5 +1,5 @@
 import React from "react";
-import { GalleryParallax } from "../components/ui/GalleryParallax";
+import { GalleryParallax } from "../Components/ui/GalleryParallax";
 
 const products = [
   { name: "Logo 1", image: "/Logo.png" },
