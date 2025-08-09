@@ -24,10 +24,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Facebook className="h-6 w-6" />, href: '#', color: 'hover:text-blue-400' },
-    { icon: <Twitter className="h-6 w-6" />, href: '#', color: 'hover:text-cyan-400' },
-    { icon: <Instagram className="h-6 w-6" />, href: '#', color: 'hover:text-pink-400' },
-    { icon: <Linkedin className="h-6 w-6" />, href: '#', color: 'hover:text-blue-600' },
+    // { icon: <Facebook className="h-6 w-6" />, href: '#', color: 'hover:text-blue-400' },
+    { icon: <Twitter className="h-6 w-6" />, href: 'https://x.com/hack4maha', color: 'hover:text-cyan-400' },
+    { icon: <Instagram className="h-6 w-6" />, href: 'https://www.instagram.com/hack4maha/', color: 'hover:text-pink-400' },
+    { icon: <Linkedin className="h-6 w-6" />, href: 'https://www.linkedin.com/company/hack4maha/', color: 'hover:text-blue-600' },
   ];
 
   const handleNavClick = (sectionId) => {

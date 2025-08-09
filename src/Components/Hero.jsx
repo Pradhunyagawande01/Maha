@@ -151,7 +151,7 @@ className="font-pixel text-sm tracking-widest border-[4px] bg-[#1110] text-white
 
   {/* Pixel Button for Discord */}
   <a
-    href=""
+    href="https://discord.gg/nP7k2WFvNX"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-transperent hover:bg-blue-700 text-white font-bold py-3 px-6 border-4 border-black rounded-lg  transition-all duration-200"
