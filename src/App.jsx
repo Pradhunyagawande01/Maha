@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
 import About from './Components/About';
+ 
 import Tracks from './Components/Tracks';
 import StickyScrollRevealDemo from "./Components/stickyscrollrevealdemo";
 import Timeline from './Components/Timeline';
@@ -13,6 +14,7 @@ import Sponsors from './Components/Sponsors';
 import Footer from './Components/Footer';
 import MarioCharacter from './Components/MarioCharacter';
 import FaqSection from './Components/FAQ';
+
 import './style/App.css';
 
 
@@ -84,6 +86,7 @@ function App() {
           <section id="about">
             <About />
           </section>
+         
 
          
           {/* <section id="tracks">

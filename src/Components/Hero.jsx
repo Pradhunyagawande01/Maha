@@ -9,6 +9,7 @@ import {
   Target,
   Award,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [particles, setParticles] = useState([]);
@@ -131,21 +132,26 @@ const Hero = () => {
       {/* Pixelated Buttons - Centered */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center slide-in-right zoom-in">
   {/* Transparent Glass Button with Animated Yellow Fill */}
-  <a
-    href="#register"
-    className="relative overflow-hidden rounded-lg border-2 border-white text-white font-bold py-3 px-6 backdrop-blur-md bg-transparent transition-all duration-300 z-10 group"
-  >
-    <span className="relative z-20">Register Now</span>
-   <span
-  className="absolute inset-0 bg-black-100 blur-md scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-0"
-  style={{ borderRadius: "0.5rem" }}
-></span>
+<motion.a
+  href="https://hack4maharashtra.devfolio.co/"
+  target="_blank"
+  rel="noopener noreferrer"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  transition={{ duration: 0.5, delay: 0.8 }}
+  style={{ zIndex: 9999, position: 'relative' }}
+className="font-pixel text-sm tracking-widest border-[4px] bg-[#1110] text-white px-6 py-3 rounded-md shadow-[4px_4px_0px_#333] hover:bg-[#ff5c00] transition-all duration-200"
 
-  </a>
+>
+  ▶ REGISTER NOW
+</motion.a>
+
 
   {/* Pixel Button for Discord */}
   <a
-    href="https://discord.gg/yourlink"
+    href=""
     target="_blank"
     rel="noopener noreferrer"
     className="bg-transperent hover:bg-blue-700 text-white font-bold py-3 px-6 border-4 border-black rounded-lg  transition-all duration-200"

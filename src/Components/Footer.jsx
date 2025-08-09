@@ -88,7 +88,10 @@ const Footer = () => {
               </div> */}
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-cyan-400 float-animation" style={{animationDelay: '1s'}} />
-                <p className="text-slate-300">+91 98900 82643</p>
+               <a href="tel:+91 77769 55168" className="text-slate-300 hover:underline">
+ +91 77769 55168
+</a>
+
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-cyan-400 float-animation" style={{animationDelay: '2s'}} />

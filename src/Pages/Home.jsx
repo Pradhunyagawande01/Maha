@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import CountdownTimer from "../Components/CountdownTimer";
+// import CountdownTimer from "../Components/CountdownTimer";
   
 import PixelArt from "../Components/PixelArt";
 import { useEffect } from "react";
@@ -91,13 +91,15 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <Link
-              to="https://hack4maharashtra.devfolio.co/"
-              target="_blank"
-              className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200"
-            >
-              Register Now
-            </Link>
+          <a
+  href="https://hack4maharashtra.devfolio.co/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn btn-primary border-2 border-[#597E1E] hover:bg-[#ff5c00] font-pixel py-2 px-6 transition-all duration-200"
+>
+  Register Now
+</a>
+
            
           </motion.div>
           <motion.div
@@ -110,6 +112,8 @@ const Home = () => {
             </motion.div>
         </motion.div>
       </section>
+
+      {/* <CountdownTimer /> */}
 
       {/* About Section Preview */}
       <section className="">
