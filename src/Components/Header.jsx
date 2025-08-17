@@ -1,22 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 
+const navLinks = [
+  { label: 'Home', id: 'home' },
+  { label: 'About', id: 'about' },
+  { label: 'Tracks', id: 'stickyscrollrevealdemo' },
+  { label: 'Gallery', id: 'gallerydemo' },
+  { label: 'Humans', id: 'humans' },
+  { label: 'FAQ', id: 'faq' },
+];
+
 const Header = ({ activeSection, setActiveSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const originalTexts = useRef({}); // store original link text
-
-  const navigation = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Tracks', href: '#stickyscrollrevealdemo', id: 'tracks' },
-    // { name: 'Timeline', href: '#timeline', id: 'timeline' },
-    { name: 'Gallery', href: '#galleryparallax', id: 'gallery' },
-    // { name: 'Team', href: '#team', id: 'team' },
-    // { name: 'Venue', href: '#venue', id: 'venue' },
-    // { name: 'Sponsors', href: '#sponsors', id: 'sponsors' },
-    { name: 'FAQ', href: '#faq', id: 'faq' },
-  ];
 
   useEffect(() => {
     const onScroll = () => {
@@ -43,6 +40,14 @@ const Header = ({ activeSection, setActiveSection }) => {
     }, 30);
   };
 
+  const handleNavClick = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(id);
+    }
+  };
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,21 +64,20 @@ const Header = ({ activeSection, setActiveSection }) => {
           </div>
 
           {/* ✅ Desktop Navigation */}
-<div className="hidden md:flex space-x-8 justify-end flex-1">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={() => setActiveSection(item.id)}
-                ref={(el) => (originalTexts.current[item.id] = el)}
-                onMouseEnter={(e) => decryptText(e.target, item.name)}
-                onMouseLeave={(e) => (e.target.innerText = item.name)}
+          <div className="hidden md:flex space-x-8 justify-end flex-1">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => handleNavClick(link.id)}
+                ref={(el) => (originalTexts.current[link.id] = el)}
+                onMouseEnter={(e) => decryptText(e.target, link.label)}
+                onMouseLeave={(e) => (e.target.innerText = link.label)}
                 className={`text-sm font-medium transition duration-200 ${
-                  activeSection === item.id ? 'text-yellow-400' : 'text-white hover:text-yellow-300'
+                  activeSection === link.id ? 'text-yellow-400' : 'text-white hover:text-yellow-300'
                 }`}
               >
-                {item.name}
-              </a>
+                {link.label}
+              </button>
             ))}
           </div>
 
@@ -91,19 +95,19 @@ const Header = ({ activeSection, setActiveSection }) => {
         {/* ✅ Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-black px-2 pt-2 pb-3 space-y-1">
-            {navigation.map((item) => (
+            {navLinks.map((link) => (
               <a
-                key={item.name}
-                href={item.href}
+                key={link.id}
+                href={`#${link.id}`}
                 onClick={() => {
-                  setActiveSection(item.id);
+                  setActiveSection(link.id);
                   setIsMenuOpen(false);
                 }}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  activeSection === item.id ? 'text-yellow-400' : 'text-white hover:text-yellow-300'
+                  activeSection === link.id ? 'text-yellow-400' : 'text-white hover:text-yellow-300'
                 }`}
               >
-                {item.name}
+                {link.label}
               </a>
             ))}
           </div>

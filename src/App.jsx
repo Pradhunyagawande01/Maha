@@ -13,6 +13,7 @@ import Venue from './Components/Venue';
 import Sponsors from './Components/Sponsors';
 import Footer from './Components/Footer';
 import MarioCharacter from './Components/MarioCharacter';
+import Humans from  './Pages/Humans'
 import FaqSection from './Components/FAQ';
 
 import './style/App.css';
@@ -99,9 +100,15 @@ function App() {
            <section id="gallerydemo">
             <GalleryDemo />
           </section> 
-           <section id="galler2">
+          <section id="gallery2">
             <Gallery2 />
           </section> 
+          
+          
+           <section id="humans">
+            <Humans />
+          </section> 
+            
             {/* <section id="sponsors">
             <Sponsors />
           </section>
