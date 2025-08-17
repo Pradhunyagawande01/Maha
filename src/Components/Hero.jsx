@@ -120,7 +120,7 @@ const Hero = () => {
 
     <div className="mb-8">
       <p className="text-xl md:text-2xl text-white mb-4 mario-text slide-in-right zoom-in">
-        30 - 31st AUG 2025
+        20 - 21st SEPT 2025
       </p>
       <p className="text-lg text-orange-600 mario-text slide-in-right zoom-in mb-8">
         संयोजय | नवसृज | विजयी भव
