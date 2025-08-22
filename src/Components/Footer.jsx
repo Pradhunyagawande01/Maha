@@ -53,9 +53,15 @@ const Footer = () => {
           <div className="lg:col-span-2 slide-in">
             <div className="flex items-center space-x-2 mb-6">
             
-              <span className="text-3xl font-bold pixel-text  text-orange-500 mb-12">
-                HACK4MAHARASHTRA
-              </span>
+            <div className="flex-shrink-0">
+            <a href="#home">
+              <img
+                src="/Logo.png"
+                alt="Logo"
+                className="h-16 w-auto"
+              />
+            </a>
+          </div>
             </div>
           
             <div className="flex space-x-4">
@@ -95,7 +101,10 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-cyan-400 float-animation" style={{animationDelay: '2s'}} />
-                <p className="text-slate-300">hack4maharashtra@gmail.com</p>
+                <a href="email:hack4maharashtra@gmail.com" className='text-slate-300 hover:underline'>
+                hack4maharashtra@gmail.com
+                </a>
+                
               </div>
             </div>
           </div>
