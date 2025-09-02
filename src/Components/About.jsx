@@ -88,10 +88,10 @@ const About = () => {
 <ScrollVelocity
   className="text-3xl md:text-5xl font-bold"
   texts={[
-    "Hack4Maha 🚀",
-    "Powered by NariNexus 💡",
-    "Code. Culture. Creativity.",
-    "Powered by NariNexus 💡",
+    "Hack4Maha ",
+    "Powered by NariNexus ",
+    "Deploy. Innovate. Conquer.",
+    "Powered by NariNexus ",
   ]}
 />  
 </div>
