@@ -24,15 +24,17 @@ const About = () => {
   ];
 
   return (
-    <section className="relative py-20 bg-slate-800 overflow-hidden">
-      <DottedBg
-        dotColor="rgba(255, 255, 255, 0.25)"
-        dotSize={2}
-        baseSpacing={40}
-        repelRadius={100}
-        explodeStrength={25}
-        returnSpeed={0.5}
-      />
+<section className="relative py-20   overflow-hidden">
+     <DottedBg
+  className="w-full h-full fixed top-0 left-0"
+  dotColor="rgba(255, 255, 255, 0.25)"
+  dotSize={2}
+  baseSpacing={40}
+  repelRadius={100}
+  explodeStrength={25}
+  returnSpeed={0.5}
+/>
+
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title text-center mb-12 text-orange-500 text-4xl font-bold">

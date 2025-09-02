@@ -43,7 +43,7 @@ const Tracks = () => {
   ];
 
   return (
- <section className="relative py-20 bg-slate-800 overflow-hidden">
+ <section className="relative py-20   overflow-hidden">
   {/* Make DottedBg absolutely positioned inside */}
   <DottedBg
     dotColor="rgba(255, 255, 255, 0.25)"

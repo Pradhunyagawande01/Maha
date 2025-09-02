@@ -45,16 +45,9 @@ export const StickyScroll = ({
   });
 
   return (
-    <section className="relative py-20 bg-slate-800 overflow-hidden">
+    <section className="relative py-20   overflow-hidden">
       {/* Dotted Background */}
-      <DottedBg
-        dotColor="rgba(255, 255, 255, 0.25)"
-        dotSize={2}
-        baseSpacing={40}
-        repelRadius={100}
-        explodeStrength={25}
-        returnSpeed={0.5}
-      />
+   
       
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">

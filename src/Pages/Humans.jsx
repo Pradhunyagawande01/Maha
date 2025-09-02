@@ -79,7 +79,7 @@ export default function CoreTeamSection() {
   }, [])
 
   return (
-    <div className="min-h-screen relative bg-slate-800 overflow-hidden">
+    <div className="min-h-screen relative   overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <h2 className="section-title text zoom-in text-orange-500 mb-12">
           Organizer

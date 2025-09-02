@@ -59,7 +59,7 @@ const Venue = () => {
   ];
 
   return (
- <section className="relative py-20 bg-slate-800 overflow-hidden">
+ <section className="relative py-20   overflow-hidden">
   {/* Make DottedBg absolutely positioned inside */}
   <DottedBg
     dotColor="rgba(255, 255, 255, 0.25)"
@@ -154,7 +154,10 @@ const Venue = () => {
         </div>
 
         {/* GoogleGeminiEffect Component - Same to Same */}
-        <div ref={geminiRef} className="mt-8 relative h-screen flex items-center justify-center">
+
+
+        
+        <div ref={geminiRef} className="mt-0.5 relative h-screen flex items-center justify-center">
           <GoogleGeminiEffect
             pathLengths={pathLengths}
             title="Amazing Venue Experience"

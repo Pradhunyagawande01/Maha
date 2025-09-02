@@ -50,7 +50,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="relative py-20 bg-slate-800 overflow-hidden font-poppins">
+    <section className="relative py-20   overflow-hidden font-poppins">
       <DottedBg
         dotColor="rgba(255, 255, 255, 0.25)"
         dotSize={2}

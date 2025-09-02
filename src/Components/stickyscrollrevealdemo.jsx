@@ -48,7 +48,7 @@ const content = [
 
 export default function StickyScrollRevealDemo() {
   return (
-    <section className="relative py-20 bg-slate-800 overflow-hidden">
+    <section className="relative py-20   overflow-hidden">
       {/* scrolling dotted background */}
       <DottedBg
         dotColor="rgba(255, 255, 255, 0.25)"

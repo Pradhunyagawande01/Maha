@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'About', id: 'about' },
   { label: 'Tracks', id: 'stickyscrollrevealdemo' },
   { label: 'Gallery', id: 'gallerydemo' },
-  { label: 'Humans', id: 'humans' },
+  { label: 'Humans', id: 'chromagrid' },
   { label: 'FAQ', id: 'faq' },
 ];
 

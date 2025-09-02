@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* scrollbar issue fix */
+}
+
 /* Add to your global CSS or ScrollVelocity.css */
 @keyframes zoomIn {
   0% {
@@ -47,4 +53,15 @@
 
 .zoom-in {
   animation: zoomIn 0.6s ease-out forwards;
+}
+
+
+/* Hide Scrollbar for all browsers */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }

@@ -5,16 +5,18 @@ import About from "./Components/About";
 
 import Tracks from "./Components/Tracks";
 import StickyScrollRevealDemo from "./Components/stickyscrollrevealdemo";
+import ChromaGrid from "./Components/Team/ChromaGrid"
 import Timeline from "./Components/Timeline";
 import GalleryDemo from "./Pages/GalleryDemo";
 import Gallery2 from "./Pages/Gallery2";
-import Team from "./Components/Team";
+ 
 import Venue from "./Components/Venue";
 import Sponsors from "./Components/Sponsors";
 import Footer from "./Components/Footer";
 import MarioCharacter from "./Components/MarioCharacter";
 import Humans from "./Pages/Humans";
 import FaqSection from "./Components/FAQ";
+import Layout from "./Components/Webgradient/Layout"
 
 import "./style/App.css";
 
@@ -80,44 +82,46 @@ function App() {
           setActiveSection={setActiveSection}
         />
         <main>
-          <section id="home">
-            <Hero />
-          </section>
-          <section id="about">
-            <About />
-          </section>
+        <section id="home">
+          <Hero />
+        </section>
+           <Layout activeSection={activeSection} setActiveSection={setActiveSection}>
+         
+        <section id="about">
+          <About />
+        </section>
 
-          {/* <section id="tracks">
-            <Tracks />
-          </section> */}
-          <section id="stickyscrollrevealdemo">
-            <StickyScrollRevealDemo />
-          </section>
+         
+        <section id="stickyscrollrevealdemo">
+          <StickyScrollRevealDemo />
+        </section>
 
-          <section id="gallerydemo">
-            <GalleryDemo />
-          </section>
-          <section id="gallery2">
-            <Gallery2 />
-          </section>
+        <section id="gallerydemo">
+          <GalleryDemo />
+        </section>
+        <section id="gallery2">
+          <Gallery2 />
+        </section>
 
-          <section id="humans">
-            <Humans />
-          </section>
 
-          {/* <section id="sponsors">
-            <Sponsors />
-          </section>
-          <section id="team">
-            <Team />
-          </section>
-           <section id="venue">
-            <Venue />
-          </section> */}
+        <section id="chromagrid">
+          <ChromaGrid />
+        </section>
+        
 
-          <section id="faq">
-            <FaqSection />
-          </section>
+        {/* <section id="sponsors">
+          <Sponsors />
+        </section>
+
+       
+        <section id="venue">
+          <Venue />
+        </section> */}
+
+        <section id="faq">
+          <FaqSection />
+        </section>
+      </Layout>
         </main>
         <Footer />
       </div>

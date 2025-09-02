@@ -20,7 +20,7 @@ export const GalleryParallax = ({ products }) => {
   console.log("Products: ", products); // ✅ Debug: Are products showing?
 
   return (
-    <section ref={targetRef} className="relative py-20 bg-slate-800 overflow-hidden">
+    <section ref={targetRef} className="relative py-20   overflow-hidden">
       {/* ✅ Animated Background */}
       <DottedBg
         dotColor="rgba(255, 255, 255, 0.25)"

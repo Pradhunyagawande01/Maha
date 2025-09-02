@@ -195,7 +195,7 @@ const Sponsors = () => {
   }
 
   return (
-    <div className="bg-gray-900 bg-opacity-90 min-h-screen">
+    <div className="c bg-opacity-90 min-h-screen">
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Animated pixel art elements */}
