@@ -9,9 +9,15 @@ const Sponsors = () => {
       sponsors: [
         {
           // name: "Orkes",
-         logo: "/Sponsors/Orkes.jpg",
+          logo: "/Sponsors/Orkes.jpg",
           description: " ",
           link: "https://www.orkes.io",
+        },
+        {
+          // name: "Fireblaze AI school",
+          logo: "/Sponsors/Fireblaze.jpg",
+          description: " ",
+          link: "https://www.instagram.com/fireblaze_edu/",
         },
       ],
     },
@@ -127,25 +133,26 @@ const Sponsors = () => {
         </h2>
 
         <div className="space-y-16">
-       {/* 🔹 Title Sponsor + Gold Sponsor (center aligned) */}
-{sponsorTiers.slice(0, 2).map((tier, idx) => (
-  <div key={idx} className="text-center">
-    <h3
-      className={`text-3xl font-bold pixel-text bg-gradient-to-r ${tier.color} bg-clip-text text-transparent mb-10`}
-    >
-      {tier.tier}
-    </h3>
-    <div className="flex flex-wrap justify-center gap-28 max-w-5xl mx-auto">
-      {tier.sponsors.map((sponsor, sIdx) => (
-        <div key={sIdx} className="w-80 h-72 sm:w-1/2 md:w-1/3 lg:w-1/4">
-          <SponsorCard sponsor={sponsor} color={tier.color} />
-        </div>
-      ))}
-    </div>
-  </div>
-))}
-
-
+          {/* 🔹 Title Sponsor + Gold Sponsor (center aligned) */}
+          {sponsorTiers.slice(0, 2).map((tier, idx) => (
+            <div key={idx} className="text-center">
+              <h3
+                className={`text-3xl font-bold pixel-text bg-gradient-to-r ${tier.color} bg-clip-text text-transparent mb-10`}
+              >
+                {tier.tier}
+              </h3>
+              <div className="flex flex-wrap justify-center gap-28 max-w-5xl mx-auto">
+                {tier.sponsors.map((sponsor, sIdx) => (
+                  <div
+                    key={sIdx}
+                    className="w-80 h-72 sm:w-1/2 md:w-1/3 lg:w-1/4"
+                  >
+                    <SponsorCard sponsor={sponsor} color={tier.color} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
 
           {/* 🔹 Hackathon + Venue side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -157,7 +164,11 @@ const Sponsors = () => {
                   {tier.tier}
                 </h3>
                 {tier.sponsors.map((sponsor, sIdx) => (
-                  <SponsorCard key={sIdx} sponsor={sponsor} color={tier.color} />
+                  <SponsorCard
+                    key={sIdx}
+                    sponsor={sponsor}
+                    color={tier.color}
+                  />
                 ))}
               </div>
             ))}
@@ -173,7 +184,10 @@ const Sponsors = () => {
             <div className="flex justify-center">
               {sponsorTiers[4].sponsors.map((sponsor, sIdx) => (
                 <div key={sIdx} className="max-w-xs w-full">
-                  <SponsorCard sponsor={sponsor} color={sponsorTiers[4].color} />
+                  <SponsorCard
+                    sponsor={sponsor}
+                    color={sponsorTiers[4].color}
+                  />
                 </div>
               ))}
             </div>
@@ -187,7 +201,6 @@ const Sponsors = () => {
               {sponsorTiers[5].tier}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center max-w-4xl mx-auto">
-
               {sponsorTiers[5].sponsors.map((sponsor, sIdx) => (
                 <SponsorCard
                   key={sIdx}
