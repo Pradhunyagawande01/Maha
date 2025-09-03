@@ -2,19 +2,15 @@ import React, { useState, useEffect } from "react";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
-
-import Tracks from "./Components/Tracks";
 import StickyScrollRevealDemo from "./Components/stickyscrollrevealdemo";
 import ChromaGrid from "./Components/Team/ChromaGrid"
 import Timeline from "./Components/Timeline";
 import GalleryDemo from "./Pages/GalleryDemo";
 import Gallery2 from "./Pages/Gallery2";
- 
 import Venue from "./Components/Venue";
 import Sponsors from "./Components/Sponsors";
 import Footer from "./Components/Footer";
 import MarioCharacter from "./Components/MarioCharacter";
-import Humans from "./Pages/Humans";
 import FaqSection from "./Components/FAQ";
 import Layout from "./Components/Webgradient/Layout"
 
@@ -103,20 +99,22 @@ function App() {
           <Gallery2 />
         </section>
 
+  <section id="sponsors">
+          <Sponsors />
+        </section>
 
+   
         <section id="chromagrid">
           <ChromaGrid />
         </section>
         
 
-        {/* <section id="sponsors">
-          <Sponsors />
-        </section>
+         
 
        
         <section id="venue">
           <Venue />
-        </section> */}
+        </section>
 
         <section id="faq">
           <FaqSection />
