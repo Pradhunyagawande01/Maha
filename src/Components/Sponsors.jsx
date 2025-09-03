@@ -8,7 +8,7 @@ const Sponsors = () => {
       color: "from-yellow-400 to-yellow-600",
       sponsors: [
         {
-          name: "Orkes",
+          // name: "Orkes",
          logo: "/Sponsors/Orkes.jpg",
           description: " ",
           link: "https://www.orkes.io",
@@ -20,19 +20,19 @@ const Sponsors = () => {
       color: "from-purple-400 to-purple-600",
       sponsors: [
         {
-          name: "Github",
+          // name: "Github",
           logo: "/Sponsors/github.png",
           // description: "Innovation in every solution",
           link: "https://github.com",
         },
         {
-          name: "Devfolio",
+          // name: "Devfolio",
           logo: "/Sponsors/Devfolio.png",
           // description: "Empowering developers worldwide",
           link: "https://devfolio.com",
         },
         {
-          name: "ETHIndia",
+          // name: "ETHIndia",
           logo: "/Sponsors/ETH.png",
           // description: "Empowering developers worldwide",
           link: "https://ethindia.com",
@@ -44,7 +44,7 @@ const Sponsors = () => {
       color: "from-blue-400 to-blue-600",
       sponsors: [
         {
-          name: "WIP",
+          // name: "WIP",
           logo: "/Sponsors/WIP.jpg",
           description: "Women In Product",
           link: "#",
@@ -68,7 +68,7 @@ const Sponsors = () => {
       color: "from-pink-400 to-pink-600",
       sponsors: [
         {
-          name: "Valorant",
+          // name: "Valorant",
           logo: "/Sponsors/valo.jpg",
           // description: "Official Game Partner",
           link: "#",
@@ -79,9 +79,9 @@ const Sponsors = () => {
       tier: "In-Kind Partners",
       color: "from-cyan-400 to-cyan-600",
       sponsors: [
-        { name: "Interview Cake", logo: "/Sponsors/cake.png", description: "", link: "#" },
-        { name: "Wolfram", logo: "/Sponsors/wolfram.png", description: "", link: "#" },
-        { name: ".xyz", logo: "/Sponsors/xyz.gif", description: "", link: "#" },
+        { name: "", logo: "/Sponsors/cake.png", description: "", link: "#" },
+        { name: "", logo: "/Sponsors/wolfram.png", description: "", link: "#" },
+        { name: "", logo: "/Sponsors/xyz.gif", description: "", link: "#" },
         // { name: "Partner 4", logo: "/Sponsors/k4.png", description: "", link: "#" },
         // { name: "Partner 5", logo: "/Sponsors/k5.png", description: "", link: "#" },
         // { name: "Partner 6", logo: "/Sponsors/k6.png", description: "", link: "#" },
