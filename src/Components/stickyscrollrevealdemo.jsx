@@ -6,42 +6,42 @@ import DottedBg from "./DottedBg";
 const content = [
   {
     title: "Track 1: Cybersecurity ",
-    description: "Using AI to improve healthcare, education, or climate solutions.",
+    description: "Dive into the world of Cyber Security where innovation meets protection, and ideas safeguard the digital future.",
     content: <img src="/tracks/CS.png" alt="AI Track" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 2: Edge ai",
-    description: "Build tools for reporting, tracking, or supporting women's safety.",
+    description: "Unlock the power of Edge AI bringing intelligence closer to devices for faster, smarter, and real-time decisions.",
     content: <img src="/tracks/Edge ai.png" alt="Safety" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 3:  Education",
-    description: "Solve environmental problems using smart tech solutions.",
+    description: "Reimagine Education building smarter, accessible, and engaging learning for every mind.",
     content: <img src="/tracks/Education.png" alt="Climate" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 4: FinTech Innovation",
-    description: "Create solutions for digital payments, financial inclusion, and blockchain technology.",
+    description: "Drive the future of finance where technology meets innovation to create smarter, secure, and inclusive solutions.",
     content: <img src="/tracks/fin tech.png" alt="FinTech" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 5: HealthCare",
-    description: "Develop digital health solutions, telemedicine platforms, and medical device innovations.",
+    description: "Transforming Healthcare harnessing technology to build smarter, faster, and patient-centric solutions for a healthier tomorrow",
     content: <img src="/tracks/HealthCare.png" alt="HealthTech" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 6: Sustain",
-    description: "Build educational platforms, learning management systems, and skill development tools.",
+    description: "Innovating for Sustainability creating greener, smarter, and responsible solutions for a better planet.",
     content: <img src="/tracks/Sustain.png" alt="EdTech" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 7: VR",
-    description: "Create connected devices and smart infrastructure solutions for modern urban challenges.",
+    description: "Step into Virtual Reality where imagination meets innovation to create immersive worlds and limitless experiences.",
     content: <img src="/tracks/VR.png" alt="IoT Track" className="h-full w-full object-cover" />,
   },
   {
     title: "Track 8: Web3",
-    description: "Develop security solutions, threat detection systems, and privacy protection tools.",
+    description: "Building the decentralized future where Web3 empowers trust, transparency, and true ownership.",
     content: <img src="/tracks/WEB 3.png" alt="Cybersecurity" className="h-full w-full object-cover" />,
   },
 ];

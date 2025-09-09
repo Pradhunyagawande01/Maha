@@ -108,18 +108,8 @@ const Venue = () => {
           </div>
         </div>
 
-        {/* Gemini Effect */}
-        <div
-          ref={geminiRef}
-          className="mt-4 relative h-screen flex items-center justify-center"
-        >
-          <GoogleGeminiEffect
-            pathLengths={pathLengths}
-            title="Amazing Venue Experience"
-            description="Witness the magic of our state-of-the-art venue coming to life as you scroll!"
-            className="relative top-0"
-          />
-        </div>
+        
+         
       </div>
     </section>
   );
