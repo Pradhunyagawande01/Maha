@@ -103,7 +103,7 @@ const ChromaGrid = ({
     {
       image: "/org/Navinya.jpg",
       title: "Navinya",
-      subtitle: "Public Realations",
+      subtitle: "Public Relations",
       socials: [
         { icon: <FaLinkedin />, url: " https://www.linkedin.com/in/navinya-yede-251802257/" },
         // { icon: <FaInstagram />, url: " " },
@@ -114,11 +114,11 @@ const ChromaGrid = ({
     },
     {
       image: "/org/Ishita.png",
-      title: "Isha",
+      title: "Ishita",
       subtitle: "Design Lead",
       socials: [
         { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/ishita-soni-work/" },
-        // { icon: <FaInstagram />, url: "https://instagram.com/isha" },
+        { icon: <FaInstagram />, url: "https://www.instagram.com/ishita.soni_?igsh=ZHJjdHhnM3RwdWR4" },
         // { icon: <FaGithub />, url: "https://github.com/isha" },
       ],
       borderColor: "#EAB308",
